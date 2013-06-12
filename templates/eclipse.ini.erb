@@ -12,11 +12,11 @@ org.eclipse.platform
 256m
 --launcher.defaultAction
 openFile
+-vm
+<%= scope.lookupvar('eclipse::userdevdir') %>/<%= scope.lookupvar('eclipse::jdk') %>/bin
 -vmargs
 -Dosgi.requiredJavaVersion=1.5
 -Dhelp.lucene.tokenizer=standard
 -XX:MaxPermSize=256m
 -Xms40m
 -Xmx512m
--vm
-<%= scope.lookupvar('eclipse::userdevdir') %>/<%= scope.lookupvar('eclipse::jdk') %>
