@@ -1,0 +1,40 @@
+{
+  "name": "fuin-puppet-eclipse",
+  "author": "Michael Schnell, Roman Voitenko",
+  "description": "Download and install Eclipse with Puppet.",
+  "license": "Apache 2.0",
+  "project_page": "https://github.com/michael-schnell/fuin-puppet-eclipse",
+  "source": "https://github.com/michael-schnell/fuin-puppet-eclipse.git",
+  "summary": "Manage Eclipse installation with Puppet",
+  "version": "0.1.0",
+  "checksums": {
+    "Modulefile": "965e220ae9d4a1cd700b1a31cddbc318",
+    "README.md": "936313664f42d2a8d8659ee0c5ad72ce",
+    "manifests\\init.pp": "fed2d09b425c4c55a66ec2d5f9a92cf5",
+    "modules\\archive\\.travis.yml": "c7e5025001a1f14b7d7680d8bc036c43",
+    "modules\\archive\\Gemfile": "b9cc73f1051890bdf7287d577e7a5278",
+    "modules\\archive\\LICENSE-2.0.txt": "3b83ef96387f14655fc854ddc3c6bd57",
+    "modules\\archive\\Modulefile": "c0e2ceaee46f9b2303707593080b7ba9",
+    "modules\\archive\\README.md": "98b0eefec78b6166591413867957646a",
+    "modules\\archive\\Rakefile": "727888ad80f809c4984181b169499d96",
+    "modules\\archive\\manifests\\download.pp": "4757dc2efd4d8d5966fbd9a94da4ee0f",
+    "modules\\archive\\manifests\\extract.pp": "8ebd36fb8320574fc5ba0090674aaffd",
+    "modules\\archive\\manifests\\init.pp": "c6dc36e3c99db2dcfe2d82d4dd048d74",
+    "modules\\archive\\spec\\fixtures\\manifests\\init.pp": "d41d8cd98f00b204e9800998ecf8427e",
+    "modules\\archive\\spec\\fixtures\\modules\\archive\\files": "44ba845ac365b54fdcb82486be099fdd",
+    "modules\\archive\\spec\\fixtures\\modules\\archive\\lib": "95c9e3dc46668d52ee3a626f572b3152",
+    "modules\\archive\\spec\\fixtures\\modules\\archive\\manifests": "34706ed96bbdc06b59dc4f6c1b57629e",
+    "modules\\archive\\spec\\fixtures\\modules\\archive\\templates": "86d737f8796bfee4c25e84584537ce99",
+    "modules\\archive\\spec\\spec_helper.rb": "3011a30b013ba2e44f7bf8615fdf2b8a",
+    "templates\\eclipse.desktop.erb": "ee1b67c5538f142dee40115ea20a0817",
+    "templates\\eclipse.ini.erb": "dac2c7a7acde2c64ed04418e077309c1",
+    "tests\\win32.pp": "a8781ce9de3adfc8a11e7d2e6f390f10",
+    "tests\\win64.pp": "6728ef539c4a95cbbb5db88ea79b5db7"
+  },
+  "dependencies": [
+    {
+      "name": "puppet-archive",
+      "version_requirement": "\u003e\u003d0.1.1"
+    }
+  ]
+}
