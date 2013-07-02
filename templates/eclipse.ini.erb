@@ -13,12 +13,12 @@ org.eclipse.platform
 --launcher.defaultAction
 openFile
 -vm
-<%= scope.lookupvar('eclipse::jdkHome') %>/bin/java
+<%= @jdkHome %>/bin
 -vmargs
 -Dosgi.requiredJavaVersion=1.5
 -Dhelp.lucene.tokenizer=standard
-<% scope.lookupvar('eclipse::vmargs') do |vmarg| -%>
+<% @vmargs.each do |vmarg| -%>
 <%= vmarg %>
 <% end -%>
-<% if scope.lookupvar('eclipse::country') != "DEFAULT" %>-Duser.country=<%= scope.lookupvar('eclipse::country') %><% end %>
-<% if scope.lookupvar('eclipse::language') != "DEFAULT" %>-Duser.language=<%= scope.lookupvar('eclipse::language') %><% end %>
+<% if country != "DEFAULT"  %>-Duser.country=<%= @country %><% end %>
+<% if language != "DEFAULT" %>-Duser.language=<%= @language %><% end %>

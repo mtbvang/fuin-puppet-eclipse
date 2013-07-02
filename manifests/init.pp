@@ -31,7 +31,7 @@
 #   $language = "DEFAULT"
 #     Lannguage to set for the JVM. Defaults to the system language.
 #
-class eclipse (
+define eclipse (
   $downloadUrl = undef,
   $release     = undef,
   $bit         = undef,
@@ -80,10 +80,12 @@ class eclipse (
   # Configure eclipse.ini with VM path ($jdkHome)
   file { "eclipse.ini":
     ensure  => file,
-    path    => "${targetDir}/eclipse.ini",
-    content => template("eclipse/eclipse.ini.erb")
+    path    => "${targetDir}/eclipse/eclipse.ini",
+    content => template("eclipse/eclipse.ini.erb"),
+    require => Archive['eclipse'],
   }
 
+  $installpath = "${targetDir}/eclipse"
   # Create a desktop link?
   if ($desktopLink) {
     case $::osfamily {
