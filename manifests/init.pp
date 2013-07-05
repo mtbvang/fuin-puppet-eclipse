@@ -95,14 +95,9 @@ define eclipse (
 	}
         file { "eclipse.desktop":
           ensure  => file,
-<<<<<<< HEAD
           path    => "/home/${name}/.local/share/applications/eclipse.desktop",
           content => template("eclipse/eclipse.desktop.erb"),
 	  require => Exec ["mkdir -p /home/${name}/.local/share/applications/"],
-=======
-          path    => "~/.local/share/applications/eclipse.desktop",
-          content => template("eclipse/eclipse.desktop.erb")
->>>>>>> 80c593e6c5e4613871ceb278ea7297d44c877fa6
         }
       }
     }
