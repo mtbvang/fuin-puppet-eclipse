@@ -92,7 +92,7 @@ define eclipse (
       'Debian' : {
         file { "eclipse.desktop":
           ensure  => file,
-          path    => "/home/${name}/.local/share/applications/eclipse.desktop",
+          path    => "~/.local/share/applications/eclipse.desktop",
           content => template("eclipse/eclipse.desktop.erb")
         }
       }
