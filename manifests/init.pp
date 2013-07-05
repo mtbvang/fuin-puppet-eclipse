@@ -90,10 +90,14 @@ define eclipse (
   if ($desktopLink) {
     case $::osfamily {
       'Debian' : {
+	exec { "mkdir -p /home/${name}/.local/share/applications/":
+	  creates => "/home/${name}/.local/share/applications/",
+	}
         file { "eclipse.desktop":
           ensure  => file,
           path    => "/home/${name}/.local/share/applications/eclipse.desktop",
-          content => template("eclipse/eclipse.desktop.erb")
+          content => template("eclipse/eclipse.desktop.erb"),
+	  require => Exec ["mkdir -p /home/${name}/.local/share/applications/"],
         }
       }
     }
